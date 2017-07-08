@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main.java;
+package main.java.com.tango.uberscrum.services;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

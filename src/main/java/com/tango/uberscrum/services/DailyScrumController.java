@@ -29,7 +29,13 @@ public class DailyScrumController {
 			@RequestParam(value="opportunities") String opportunities,
 			@RequestParam(value="teamMemberName") String teamMember) {
 		
-		repository.save(new DailyScrum(teamId, yesterdayAccomplishment, todayTask, opportunities, new Date(), teamMember));
+		try {
+			repository.save(new DailyScrum(teamId, yesterdayAccomplishment, todayTask, opportunities, new Date(), teamMember));
+		}
+		catch(Exception e) {
+			//log error
+			return false;
+		}
 		
 		return true;
 	}
